@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AURÈLE — The Spectrum Bracelet | Cash on delivery in Canada</title>
-<meta name="description" content="The Spectrum Bracelet by AURÈLE: faceted multicolour beads, gold-tone accents, adjustable chain. Pay only when you receive it. Canada.">
+<meta name="description" content="The Spectrum Bracelet by AURÈLE: four natural gemstones, solid sterling silver chain with gold plating, adjustable fit. Pay only when you receive it. Canada.">
 <meta property="og:title" content="AURÈLE — The Spectrum Bracelet">
 <meta property="og:image" content="assets/dark-spark.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,21 +46,17 @@ nav.s{background:rgba(6,5,5,.9);backdrop-filter:blur(10px)}
 #pre i{display:block;height:1px;width:0;background:var(--gold);margin:22px auto 0}
 /* story */
 .story{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:center}
-.story .ph{aspect-ratio:4/5;overflow:hidden}.story img{width:100%;height:115%;object-fit:cover}
+.story .ph{aspect-ratio:4/5;overflow:hidden}.story video{width:100%;height:100%;object-fit:cover}.chips{list-style:none;margin-top:34px;display:grid;gap:16px}.chips li{display:grid;grid-template-columns:90px 1fr;gap:18px;align-items:center}.chips i{height:12px;border-radius:6px}.chips b{display:block;font:400 1.4rem/1.2 var(--serif)}.chips span{color:var(--mute);font-size:.92rem}
 .story p{margin-top:22px;color:var(--beige);max-width:520px}
 .beads{display:flex;gap:8px;margin-top:34px}.beads i{width:26px;height:26px;border-radius:50%;box-shadow:inset 0 -4px 6px rgba(0,0,0,.35),inset 0 3px 5px rgba(255,255,255,.3)}
 @media(max-width:800px){.story{grid-template-columns:1fr}}
-/* gallery */
-#gal{background:var(--bk2)}.gal{display:grid;grid-template-columns:1.5fr 1fr;gap:4vw;align-items:center;margin-top:56px}
-.main{position:relative;aspect-ratio:4/3;background:#000;overflow:hidden;cursor:zoom-in}
-.main img,.main video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .6s}
-.main .on{opacity:1}.main .off{opacity:0}.main.zoom{cursor:zoom-out}.main.zoom img{transform:scale(2);transition:transform .2s,opacity .6s}
-.thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.thumbs button{aspect-ratio:1;border:1px solid transparent;padding:0;background:#000;cursor:pointer;overflow:hidden;position:relative;opacity:.6;transition:opacity .3s,border-color .3s}
-.thumbs button[aria-current=true],.thumbs button:hover{opacity:1;border-color:var(--gold)}
-.thumbs img{width:100%;height:100%;object-fit:cover}.thumbs .pl{position:absolute;inset:0;display:grid;place-items:center;color:var(--gold2);font-size:1.3rem;background:rgba(0,0,0,.35)}
-.cap{margin-top:22px;color:var(--mute);font-size:.95rem}
-@media(max-width:860px){.gal{grid-template-columns:1fr}}
+/* macro gallery */
+.mac{display:grid;grid-template-columns:1fr 1fr;gap:5vw 4vw;margin-top:64px}.mf{transition:opacity .5s}.mf:nth-child(even){margin-top:9vw}
+.mac:hover .mf:not(:hover){opacity:.45}
+.mi{overflow:hidden;aspect-ratio:16/10;background:#000;position:relative}.mi img{position:absolute;left:0;top:-8%;width:100%;height:116%;object-fit:cover;transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
+.mf:hover .mi img{transform:scale(1.07)}
+.mf figcaption{display:flex;flex-direction:column;gap:4px;margin-top:16px}.mf b{font:300 1.7rem var(--serif)}.mf span{color:var(--mute);font-size:.95rem}
+@media(max-width:760px){.mac{grid-template-columns:1fr}.mf:nth-child(even){margin-top:0}.mac:hover .mf:not(:hover){opacity:1}}
 /* features */
 .feat{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(200,169,106,.25);margin-top:56px;border:1px solid rgba(200,169,106,.25)}
 .feat div{background:var(--bk);padding:34px 26px}.feat p{margin-top:12px;color:var(--mute);font-size:.98rem}
@@ -135,19 +131,21 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 </section>
 
 <section id="story"><div class="wrap story">
-  <div class="ph"><img src="assets/stone-portrait.jpg" alt="" loading="lazy" data-alt="a_story"></div>
+  <div class="ph"><video autoplay muted loop playsinline preload="metadata" poster="assets/story-poster.jpg" aria-label="Bracelet rotating on obsidian"><source src="assets/story.mp4" type="video/mp4"></video></div>
   <div>
     <h2 data-i18n="s_h"></h2><p data-i18n="s_p1"></p><p data-i18n="s_p2"></p>
-    <div class="beads" aria-hidden="true"><i style="background:#a3174f"></i><i style="background:#d9b64a"></i><i style="background:#1f9a4b"></i><i style="background:#8fd2ac"></i><i style="background:#3b5aa8"></i><i style="background:#0b0b10"></i></div>
+    <ul class="chips">
+      <li><i style="background:linear-gradient(90deg,#e58aa8,#8a2a63,#3d1a5c)"></i><div><b data-i18n="c1n"></b><span data-i18n="c1d"></span></div></li>
+      <li><i style="background:linear-gradient(90deg,#9be3b3,#18a050,#075a2c)"></i><div><b data-i18n="c2n"></b><span data-i18n="c2d"></span></div></li>
+      <li><i style="background:linear-gradient(90deg,#7e9ee0,#2a4488,#0a1640)"></i><div><b data-i18n="c3n"></b><span data-i18n="c3d"></span></div></li>
+      <li><i style="background:linear-gradient(90deg,#f6e8b4,#e3b657,#c0841f)"></i><div><b data-i18n="c4n"></b><span data-i18n="c4d"></span></div></li>
+    </ul>
   </div>
 </div></section>
 
 <section id="gal"><div class="wrap">
   <h2 data-i18n="g_h"></h2>
-  <div class="gal">
-    <div class="main" id="gm" aria-live="polite"></div>
-    <div><div class="thumbs" id="gt"></div><p class="cap" data-i18n="g_cap"></p></div>
-  </div>
+  <div class="mac"><figure class="mf"><div class="mi"><img src="assets/macro-ruby.jpg" alt="" loading="lazy"></div><figcaption><b data-i18n="c1n"></b><span data-i18n="m1"></span></figcaption></figure><figure class="mf"><div class="mi"><img src="assets/macro-emerald.jpg" alt="" loading="lazy"></div><figcaption><b data-i18n="c2n"></b><span data-i18n="m2"></span></figcaption></figure><figure class="mf"><div class="mi"><img src="assets/macro-blue.jpg" alt="" loading="lazy"></div><figcaption><b data-i18n="c3n"></b><span data-i18n="m3"></span></figcaption></figure><figure class="mf"><div class="mi"><img src="assets/macro-yellow.jpg" alt="" loading="lazy"></div><figcaption><b data-i18n="c4n"></b><span data-i18n="m4"></span></figcaption></figure></div>
 </div></section>
 
 <section id="why"><div class="wrap">
@@ -231,10 +229,10 @@ const CONFIG={price:49.00,shipping:0,endpoint:'/api/order',email:'hello@your-dom
 /* ======================================= */
 const T={en:{
 n_story:'Story',n_gal:'The bracelet',n_trust:'Delivery',n_faq:'FAQ',n_order:'Order now',
-h1a:'Wear every',h1b:'shade of you.',hsub:'The Spectrum Bracelet: faceted gemstone-style beads in six colours, set between gold-tone accents. Pay only when it arrives at your door.',cta:'Order — pay on delivery',cta2:'Discover the story',
-s_h:'Six colours. One wrist.',s_p1:'We looked at this bracelet and saw a whole day in it: the warm rose of morning, sun-yellow noon, deep green afternoons, a cool mint breath, evening blue, and the black of the night that frames it all.',s_p2:'Gold-tone beads divide each colour like a pause between moods. It is not about luck or promises. It is a small, beautiful reminder that you are never just one shade.',
+h1a:'Wear every',h1b:'shade of you.',hsub:'The Spectrum Bracelet: four natural gemstones in rich gradients, on a solid sterling silver chain with gold plating. Pay only when it arrives at your door.',cta:'Order — pay on delivery',cta2:'Discover the story',
+s_h:'Four colours. One wrist.',s_p1:'Four natural stones. Each one fades from deep to light, so every colour has depth.',s_p2:'Nothing loud. Everything seen.',c1n:'Ruby',c1d:'Pink to deep violet',c2n:'Emerald',c2d:'Rich green gradient',c3n:'Blue sapphire',c3d:'Deep midnight blue gradient',c4n:'Yellow sapphire',c4d:'Warm golden gradient',m1:'Pink melting into deep violet, beside the spring-ring clasp and gold-plated chain.',m2:'A rich green gradient, stone by stone.',m3:'Midnight blue, deepening bead by bead.',m4:'Warm gold, from pale to deep.',
 g_h:'Look closer',g_cap:'Tap an image to switch view. Tap the main image to zoom.',
-w_h:'Why this bracelet',w1h:'Colour with intent',w1p:'Six colour groups, each separated by a gold-tone bead, so the palette reads as a deliberate design.',w2h:'Faceted beads',w2p:'Small faceted beads catch light as your wrist moves, from soft daylight to evening.',w3h:'Adjustable fit',w3p:'A spring-ring clasp with an extender chain and a small teardrop tag lets you fine-tune the length.',w4h:'Made to be given',w4p:'Colourful, light and easy to wear every day: a gift that suits many styles.',
+w_h:'Why this bracelet',w1h:'Four natural gradients',w1p:'Ruby, emerald, blue sapphire and yellow sapphire, each shading from deeper to lighter tones.',w2h:'100% natural gemstones',w2p:'Every stone is a natural gemstone, faceted to catch the light as your wrist moves.',w3h:'Solid silver, gold-plated',w3p:'Chain in solid sterling silver with gold plating (tag stamped 925), with a spring-ring clasp and extender chain to fine-tune the length.',w4h:'Made to be given',w4p:'Colourful, light and easy to wear every day: a gift that suits many styles.',
 l_q:'Elegant without trying. Colourful without shouting.',
 t_h:'Order with confidence',t1h:'Place your order',t1p:'Fill in the short form. No card, no account.',t2h:'We confirm with you',t2p:'We contact you by phone call or text, whichever you choose, to confirm details.',t3h:'Delivery to your door',t3p:'[Delivery time to confirm, e.g. X–Y business days across Canada].',t4h:'Pay on receipt',t4p:'Pay in cash when you receive your bracelet.',
 t_note:'Questions? Contact us at',
@@ -247,13 +245,13 @@ ok_h:'Thank you. Your order is in.',ok_p:'We will contact you shortly using the 
 fin_h:'The colour you were missing.',
 a_story:'Spectrum Bracelet on a travertine stone',a_l1:'Woman laughing, wearing the bracelet',a_l2:'Woman wearing the bracelet at a café',a_sum:'Spectrum Bracelet product photo',
 g:['Studio, travertine','Dark slate, sparkle','Dark slate','Grey slate','Travertine, portrait','On the wrist','Worn at a café','Worn in the sun','Product film'],
-faq:[['How do I order?','Complete the order form on this page. We then contact you to confirm, and ship once confirmed.'],['How does payment on delivery work?','You pay in cash when the bracelet arrives. Nothing is charged online.'],['How long does delivery take?','[Delivery time to confirm.] We will give you the estimate when we contact you.'],['How will you contact me?','By phone call or text message, as you choose in the form, using the number you provide.'],['What is the bracelet made of?','Faceted coloured beads with gold-tone beads and chain, a spring-ring clasp and extender chain. The tag is stamped 925. [Add verified stone and metal details from your supplier here.]'],['Can I return or exchange it?','[Add your returns and exchanges policy here, e.g. window, condition, who pays shipping.]']]},
+faq:[['How do I order?','Complete the order form on this page. We then contact you to confirm, and ship once confirmed.'],['How does payment on delivery work?','You pay in cash when the bracelet arrives. Nothing is charged online.'],['How long does delivery take?','[Delivery time to confirm.] We will give you the estimate when we contact you.'],['How will you contact me?','By phone call or text message, as you choose in the form, using the number you provide.'],['What is the bracelet made of?','100% natural gemstones (ruby, emerald, blue sapphire and yellow sapphire) on a solid sterling silver chain with gold plating. Spring-ring clasp with extender chain; the tag is stamped 925.'],['Can I return or exchange it?','[Add your returns and exchanges policy here, e.g. window, condition, who pays shipping.]']]},
 fr:{
 n_story:'Histoire',n_gal:'Le bracelet',n_trust:'Livraison',n_faq:'FAQ',n_order:'Commander',
-h1a:'Portez toutes',h1b:'vos nuances.',hsub:'Le bracelet Spectre : des perles facettées de style pierre fine en six couleurs, ponctuées de touches dorées. Payez uniquement à la livraison.',cta:'Commander — payez à la livraison',cta2:'Découvrir l’histoire',
-s_h:'Six couleurs. Un poignet.',s_p1:'En regardant ce bracelet, nous y avons vu toute une journée : le rose tendre du matin, le jaune soleil de midi, le vert profond de l’après-midi, un souffle de menthe, le bleu du soir et le noir de la nuit qui encadre le tout.',s_p2:'Des perles dorées séparent chaque couleur comme une pause entre deux humeurs. Pas de promesses ni de superstition : un joli rappel que vous n’êtes jamais d’une seule teinte.',
+h1a:'Portez toutes',h1b:'vos nuances.',hsub:'Le bracelet Spectre : quatre pierres naturelles en dégradés riches, sur une chaîne en argent massif plaqué or. Payez uniquement à la livraison.',cta:'Commander — payez à la livraison',cta2:'Découvrir l’histoire',
+s_h:'Quatre couleurs. Un poignet.',s_p1:'Quatre pierres naturelles, chacune en dégradé, du plus profond au plus clair.',s_p2:'Rien de bruyant. Tout se remarque.',c1n:'Rubis',c1d:'Du rose au violet profond',c2n:'Émeraude',c2d:'Dégradé de vert intense',c3n:'Saphir bleu',c3d:'Dégradé de bleu nuit profond',c4n:'Saphir jaune',c4d:'Dégradé d’or chaud',m1:'Du rose au violet profond, près du fermoir mousqueton et de la chaîne plaquée or.',m2:'Un dégradé de vert intense, pierre après pierre.',m3:'Un bleu nuit qui s’approfondit, perle après perle.',m4:'Un or chaud, du pâle au profond.',
 g_h:'Regardez de plus près',g_cap:'Touchez une image pour changer de vue. Touchez l’image principale pour zoomer.',
-w_h:'Pourquoi ce bracelet',w1h:'La couleur avec intention',w1p:'Six groupes de couleurs séparés par une perle dorée : une palette pensée comme un vrai dessin.',w2h:'Perles facettées',w2p:'De petites perles facettées captent la lumière au gré de vos mouvements, du jour à la soirée.',w3h:'Ajustable',w3p:'Un fermoir mousqueton avec chaînette d’extension et une petite breloque en goutte pour régler la longueur.',w4h:'Fait pour être offert',w4p:'Coloré, léger et facile à porter au quotidien : un cadeau qui plaît à bien des styles.',
+w_h:'Pourquoi ce bracelet',w1h:'Quatre dégradés naturels',w1p:'Rubis, émeraude, saphir bleu et saphir jaune, chacun nuancé de tons profonds à tons plus clairs.',w2h:'Pierres 100 % naturelles',w2p:'Chaque pierre est une pierre naturelle, facettée pour capter la lumière au gré de vos gestes.',w3h:'Argent massif plaqué or',w3p:'Chaîne en argent massif plaqué or (breloque poinçonnée 925), fermoir mousqueton et chaînette d’extension pour ajuster la longueur.',w4h:'Fait pour être offert',w4p:'Coloré, léger et facile à porter au quotidien : un cadeau qui plaît à bien des styles.',
 l_q:'Élégant sans effort. Coloré sans bruit.',
 t_h:'Commandez en toute confiance',t1h:'Passez commande',t1p:'Remplissez le court formulaire. Sans carte, sans compte.',t2h:'Nous confirmons avec vous',t2p:'Nous vous joignons par appel ou texto, selon votre choix, pour confirmer les détails.',t3h:'Livré chez vous',t3p:'[Délai de livraison à confirmer, p. ex. X à Y jours ouvrables partout au Canada].',t4h:'Payez à la réception',t4p:'Payez comptant à la réception de votre bracelet.',
 t_note:'Des questions? Écrivez-nous à',
@@ -266,7 +264,7 @@ ok_h:'Merci. Votre commande est reçue.',ok_p:'Nous vous contacterons sous peu, 
 fin_h:'La couleur qui vous manquait.',
 a_story:'Bracelet Spectre sur une pierre de travertin',a_l1:'Femme qui rit, portant le bracelet',a_l2:'Femme portant le bracelet dans un café',a_sum:'Photo du bracelet Spectre',
 g:['Studio, travertin','Ardoise sombre, éclats','Ardoise sombre','Ardoise grise','Travertin, portrait','Au poignet','Porté au café','Porté au soleil','Film du produit'],
-faq:[['Comment commander?','Remplissez le formulaire sur cette page. Nous vous contactons pour confirmer, puis expédions.'],['Comment fonctionne le paiement à la livraison?','Vous payez comptant à l’arrivée du bracelet. Rien n’est débité en ligne.'],['Quel est le délai de livraison?','[Délai à confirmer.] Nous vous donnerons une estimation lors de notre appel ou texto.'],['Comment allez-vous me joindre?','Par appel ou texto, selon votre choix dans le formulaire, au numéro fourni.'],['De quoi est fait le bracelet?','Perles facettées colorées, perles et chaîne dorées, fermoir mousqueton et chaînette d’extension. La breloque est poinçonnée 925. [Ajoutez ici les détails vérifiés des pierres et du métal.]'],['Puis-je retourner ou échanger?','[Ajoutez ici votre politique de retour et d’échange : délai, état, frais de port.]']]}};
+faq:[['Comment commander?','Remplissez le formulaire sur cette page. Nous vous contactons pour confirmer, puis expédions.'],['Comment fonctionne le paiement à la livraison?','Vous payez comptant à l’arrivée du bracelet. Rien n’est débité en ligne.'],['Quel est le délai de livraison?','[Délai à confirmer.] Nous vous donnerons une estimation lors de notre appel ou texto.'],['Comment allez-vous me joindre?','Par appel ou texto, selon votre choix dans le formulaire, au numéro fourni.'],['De quoi est fait le bracelet?','Pierres 100 % naturelles (rubis, émeraude, saphir bleu et saphir jaune) sur une chaîne en argent massif plaqué or. Fermoir mousqueton avec chaînette d’extension; la breloque est poinçonnée 925.'],['Puis-je retourner ou échanger?','[Ajoutez ici votre politique de retour et d’échange : délai, état, frais de port.]']]}};
 const PROV={en:['Alberta','British Columbia','Manitoba','New Brunswick','Newfoundland and Labrador','Northwest Territories','Nova Scotia','Nunavut','Ontario','Prince Edward Island','Quebec','Saskatchewan','Yukon'],
 fr:['Alberta','Colombie-Britannique','Manitoba','Nouveau-Brunswick','Terre-Neuve-et-Labrador','Territoires du Nord-Ouest','Nouvelle-Écosse','Nunavut','Ontario','Île-du-Prince-Édouard','Québec','Saskatchewan','Yukon']};
 const PCODE=['AB','BC','MB','NB','NL','NT','NS','NU','ON','PE','QC','SK','YT'];
@@ -282,19 +280,10 @@ function setLang(l){lang=l;try{localStorage.setItem('lang',l)}catch(e){}
  const ps=$('#prov'),v=ps.value;ps.innerHTML='<option value="">'+d.choose+'</option>'+PROV[l].map((p,i)=>`<option value="${PCODE[i]}">${p}</option>`).join('');ps.value=v;
  $('#faqs').innerHTML=d.faq.map(q=>`<details><summary>${q[0]}</summary><p>${q[1]}</p></details>`).join('');
  $$('[data-cfg=email]').forEach(a=>{a.textContent=CONFIG.email;if(a.href)a.href='mailto:'+CONFIG.email});$$('[data-cfg=phone]').forEach(s=>s.textContent=CONFIG.phone);
- buildThumbs();money_();
+ money_();
  $('#sub').textContent=d.o_btn;$$('.er').forEach(e=>{if(e.parentNode.classList.contains('bad'))validate(e.parentNode.querySelector('input,select'))});
  document.title=l==='fr'?'AURÈLE — Le bracelet Spectre | Paiement à la livraison au Canada':'AURÈLE — The Spectrum Bracelet | Cash on delivery in Canada';}
 function money_(){$('#up').textContent=money(CONFIG.price);$('#qv').textContent=qty;$('#tot').textContent=money(CONFIG.price*qty+CONFIG.shipping)}
-/* gallery */
-const gm=$('#gm');
-gm.innerHTML=IMGS.map((n,i)=>`<img class="${i?'off':'on'}" src="assets/${n}.jpg" alt="" ${i?'loading="lazy"':''}>`).join('')+'<video class="off" muted loop playsinline preload="none" poster="assets/poster.jpg" src="assets/bracelet.mp4" controls></video>';
-function show(i){cur=i;gm.classList.remove('zoom');$$('#gm>*').forEach((e,k)=>{e.className=k===i?'on':'off';e.style.transform='';if(e.tagName==='VIDEO'){k===i?e.play().catch(()=>{}):e.pause()}});
- $$('#gt button').forEach((b,k)=>b.setAttribute('aria-current',k===i));$$('#gm img').forEach((im,k)=>im.alt=T[lang].g[k])}
-function buildThumbs(){$('#gt').innerHTML=IMGS.map((n,i)=>`<button aria-label="${T[lang].g[i]}" aria-current="${i===cur}"><img src="assets/${n}.jpg" alt="" loading="lazy"></button>`).join('')+`<button aria-label="${T[lang].g[8]}" aria-current="${cur===8}"><img src="assets/poster.jpg" alt=""><span class="pl">▶</span></button>`;
- $$('#gt button').forEach((b,i)=>b.onclick=()=>show(i));$$('#gm img').forEach((im,k)=>im.alt=T[lang].g[k])}
-gm.addEventListener('click',e=>{if(cur<8&&e.target.tagName==='IMG')gm.classList.toggle('zoom')});
-gm.addEventListener('mousemove',e=>{if(gm.classList.contains('zoom')){const r=gm.getBoundingClientRect(),i=$('#gm .on');i.style.transformOrigin=((e.clientX-r.left)/r.width*100)+'% '+((e.clientY-r.top)/r.height*100)+'%'}});
 /* order */
 $('#qm').onclick=()=>{qty=Math.max(1,qty-1);money_()};$('#qp').onclick=()=>{qty=Math.min(CONFIG.maxQty,qty+1);money_()};
 const rules={name:v=>v.trim().length>=2||'e_req',phone:v=>/^(\+?1)?\D*\d{3}\D*\d{3}\D*\d{4}$/.test(v.trim())&&v.replace(/\D/g,'').replace(/^1(?=\d{10}$)/,'').length===10||(v.trim()?'e_phone':'e_req'),
@@ -324,7 +313,7 @@ function done(){const p=$('#pre');if(!p)return;if(rm||!window.gsap){p.remove();r
  gsap.timeline().to('#pre i',{width:180,duration:.9,ease:'power2.inOut'}).to('#pre',{opacity:0,duration:.7,onComplete:()=>p.remove()})
  .from('.hl span',{yPercent:110,duration:1.2,ease:'power4.out',stagger:.15},'-=.3').from('#hero .sub,#hero .cta-row,nav',{opacity:0,y:20,duration:.9,stagger:.12},'-=.7');
  if(window.ScrollTrigger){gsap.registerPlugin(ScrollTrigger);
-  gsap.utils.toArray('.story img').forEach(i=>gsap.to(i,{yPercent:-12,ease:'none',scrollTrigger:{trigger:i,scrub:true}}));
+  gsap.utils.toArray('.mf').forEach(f=>{gsap.from(f,{opacity:0,y:80,duration:1.2,ease:'power3.out',scrollTrigger:{trigger:f,start:'top 88%'}});gsap.fromTo(f.querySelector('img'),{yPercent:-5},{yPercent:5,ease:'none',scrollTrigger:{trigger:f,scrub:true}})});gsap.from('.chips li',{opacity:0,x:-24,duration:.8,stagger:.15,scrollTrigger:{trigger:'.chips',start:'top 85%'}});
   gsap.to('#final>img',{yPercent:8,ease:'none',scrollTrigger:{trigger:'#final',scrub:true}});
   gsap.from('.feat div',{opacity:0,y:30,duration:.8,stagger:.12,scrollTrigger:{trigger:'.feat',start:'top 80%'}});
   gsap.from('.life figure',{clipPath:'inset(0 0 100% 0)',duration:1.3,ease:'power3.out',stagger:.2,scrollTrigger:{trigger:'.life',start:'top 75%'}})}}
