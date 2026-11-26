@@ -45,11 +45,14 @@ nav.s{background:rgba(6,5,5,.9);backdrop-filter:blur(10px)}
 #pre b{display:block;font:300 clamp(2rem,6vw,3.4rem) var(--serif);letter-spacing:.4em;margin-right:-.4em}
 #pre i{display:block;height:1px;width:0;background:var(--gold);margin:22px auto 0}
 /* story */
-.story{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:center}
-.story .ph{aspect-ratio:4/5;overflow:hidden}.story video{width:100%;height:100%;object-fit:cover}.chips{list-style:none;margin-top:34px;display:grid;gap:16px}.chips li{display:grid;grid-template-columns:90px 1fr;gap:18px;align-items:center}.chips i{height:12px;border-radius:6px}.chips b{display:block;font:400 1.4rem/1.2 var(--serif)}.chips span{color:var(--mute);font-size:.92rem}
-.story p{margin-top:22px;color:var(--beige);max-width:520px}
+.story{display:grid;grid-template-columns:1.3fr 1fr;gap:5vw;align-items:center}
+.vf{padding:10px;border:1px solid rgba(200,169,106,.35);background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.015));backdrop-filter:blur(6px);box-shadow:0 0 90px rgba(200,169,106,.16),0 30px 60px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.12);border-radius:6px}
+.story .ph{aspect-ratio:16/9;background:#000;overflow:hidden;border-radius:2px}.story video{width:100%;height:100%;object-fit:contain;display:block}
+.lead{font:italic 300 clamp(1.5rem,2.6vw,2.1rem)/1.25 var(--serif);color:var(--gold2)}.story .lead{margin-top:18px}.story .end{font:300 1.15rem var(--serif);font-style:italic;color:var(--ivory);margin-top:26px}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}.tags span{border:1px solid rgba(200,169,106,.5);color:var(--gold2);padding:7px 14px;font-size:.85rem}.chips{list-style:none;margin-top:34px;display:grid;gap:16px}.chips li{display:grid;grid-template-columns:90px 1fr;gap:18px;align-items:center}.chips i{height:12px;border-radius:6px}.chips b{display:block;font:400 1.4rem/1.2 var(--serif)}.chips span{color:var(--mute);font-size:.92rem}
+.story p{margin-top:22px;color:var(--beige);max-width:540px}
 .beads{display:flex;gap:8px;margin-top:34px}.beads i{width:26px;height:26px;border-radius:50%;box-shadow:inset 0 -4px 6px rgba(0,0,0,.35),inset 0 3px 5px rgba(255,255,255,.3)}
-@media(max-width:800px){.story{grid-template-columns:1fr}}
+@media(max-width:860px){.story{grid-template-columns:1fr}}
 /* macro gallery */
 .mac{display:grid;grid-template-columns:1fr 1fr;gap:5vw 4vw;margin-top:64px}.mf{transition:opacity .5s}.mf:nth-child(even){margin-top:9vw}
 .mac:hover .mf:not(:hover){opacity:.45}
@@ -131,15 +134,17 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 </section>
 
 <section id="story"><div class="wrap story">
-  <div class="ph"><video autoplay muted loop playsinline preload="metadata" poster="assets/story-poster.jpg" aria-label="Bracelet rotating on obsidian"><source src="assets/story.mp4" type="video/mp4"></video></div>
+  <div class="vf"><div class="ph"><video autoplay muted loop playsinline preload="metadata" poster="assets/story-poster.jpg" aria-label="Bracelet rotating on obsidian"><source src="assets/story.mp4" type="video/mp4"></video></div></div>
   <div>
-    <h2 data-i18n="s_h"></h2><p data-i18n="s_p1"></p><p data-i18n="s_p2"></p>
+    <h2 data-i18n="s_h"></h2><p class="lead" data-i18n="s_lead"></p><p data-i18n="s_p1"></p>
     <ul class="chips">
       <li><i style="background:linear-gradient(90deg,#e58aa8,#8a2a63,#3d1a5c)"></i><div><b data-i18n="c1n"></b><span data-i18n="c1d"></span></div></li>
       <li><i style="background:linear-gradient(90deg,#9be3b3,#18a050,#075a2c)"></i><div><b data-i18n="c2n"></b><span data-i18n="c2d"></span></div></li>
       <li><i style="background:linear-gradient(90deg,#7e9ee0,#2a4488,#0a1640)"></i><div><b data-i18n="c3n"></b><span data-i18n="c3d"></span></div></li>
       <li><i style="background:linear-gradient(90deg,#f6e8b4,#e3b657,#c0841f)"></i><div><b data-i18n="c4n"></b><span data-i18n="c4d"></span></div></li>
     </ul>
+    <div class="tags"><span data-i18n="tg1"></span><span data-i18n="tg2"></span></div>
+    <p class="end" data-i18n="s_p2"></p>
   </div>
 </div></section>
 
@@ -230,7 +235,7 @@ const CONFIG={price:49.00,shipping:0,endpoint:'/api/order',email:'hello@your-dom
 const T={en:{
 n_story:'Story',n_gal:'The bracelet',n_trust:'Delivery',n_faq:'FAQ',n_order:'Order now',
 h1a:'Wear every',h1b:'shade of you.',hsub:'The Spectrum Bracelet: four natural gemstones in rich gradients, on a solid sterling silver chain with gold plating. Pay only when it arrives at your door.',cta:'Order — pay on delivery',cta2:'Discover the story',
-s_h:'Four colours. One wrist.',s_p1:'Four natural stones. Each one fades from deep to light, so every colour has depth.',s_p2:'Nothing loud. Everything seen.',c1n:'Ruby',c1d:'Pink to deep violet',c2n:'Emerald',c2d:'Rich green gradient',c3n:'Blue sapphire',c3d:'Deep midnight blue gradient',c4n:'Yellow sapphire',c4d:'Warm golden gradient',m1:'Pink melting into deep violet, beside the spring-ring clasp and gold-plated chain.',m2:'A rich green gradient, stone by stone.',m3:'Midnight blue, deepening bead by bead.',m4:'Warm gold, from pale to deep.',
+s_h:'Four colours. One wrist.',s_p1:'Ruby, emerald, blue sapphire and yellow sapphire take shape over millions of years, deep inside the earth’s rock, growing into colours and gradients no machine could ever copy. Every stone is its own shade, darker here and lighter there, a trace of the wild you can hold. Set on a solid sterling silver chain with gold plating, they catch the light with your every move and bring a little of nature’s calm, strength and rare beauty to your wrist.',s_lead:'Forged in the dark. Made for the light.',tg1:'100% natural gemstones',tg2:'Solid sterling silver, gold-plated',s_p2:'Nothing loud. Everything seen.',c1n:'Ruby',c1d:'Pink to deep violet',c2n:'Emerald',c2d:'Rich green gradient',c3n:'Blue sapphire',c3d:'Deep midnight blue gradient',c4n:'Yellow sapphire',c4d:'Warm golden gradient',m1:'Pink melting into deep violet, beside the spring-ring clasp and gold-plated chain.',m2:'A rich green gradient, stone by stone.',m3:'Midnight blue, deepening bead by bead.',m4:'Warm gold, from pale to deep.',
 g_h:'Look closer',g_cap:'Tap an image to switch view. Tap the main image to zoom.',
 w_h:'Why this bracelet',w1h:'Four natural gradients',w1p:'Ruby, emerald, blue sapphire and yellow sapphire, each shading from deeper to lighter tones.',w2h:'100% natural gemstones',w2p:'Every stone is a natural gemstone, faceted to catch the light as your wrist moves.',w3h:'Solid silver, gold-plated',w3p:'Chain in solid sterling silver with gold plating (tag stamped 925), with a spring-ring clasp and extender chain to fine-tune the length.',w4h:'Made to be given',w4p:'Colourful, light and easy to wear every day: a gift that suits many styles.',
 l_q:'Elegant without trying. Colourful without shouting.',
@@ -249,7 +254,7 @@ faq:[['How do I order?','Complete the order form on this page. We then contact y
 fr:{
 n_story:'Histoire',n_gal:'Le bracelet',n_trust:'Livraison',n_faq:'FAQ',n_order:'Commander',
 h1a:'Portez toutes',h1b:'vos nuances.',hsub:'Le bracelet Spectre : quatre pierres naturelles en dégradés riches, sur une chaîne en argent massif plaqué or. Payez uniquement à la livraison.',cta:'Commander — payez à la livraison',cta2:'Découvrir l’histoire',
-s_h:'Quatre couleurs. Un poignet.',s_p1:'Quatre pierres naturelles, chacune en dégradé, du plus profond au plus clair.',s_p2:'Rien de bruyant. Tout se remarque.',c1n:'Rubis',c1d:'Du rose au violet profond',c2n:'Émeraude',c2d:'Dégradé de vert intense',c3n:'Saphir bleu',c3d:'Dégradé de bleu nuit profond',c4n:'Saphir jaune',c4d:'Dégradé d’or chaud',m1:'Du rose au violet profond, près du fermoir mousqueton et de la chaîne plaquée or.',m2:'Un dégradé de vert intense, pierre après pierre.',m3:'Un bleu nuit qui s’approfondit, perle après perle.',m4:'Un or chaud, du pâle au profond.',
+s_h:'Quatre couleurs. Un poignet.',s_p1:'Rubis, émeraude, saphir bleu et saphir jaune se forment pendant des millions d’années, au cœur de la roche, jusqu’à révéler des couleurs et des dégradés qu’aucune machine ne saurait copier. Chaque pierre a sa propre nuance, plus profonde ici, plus claire là, une trace de nature sauvage que l’on peut tenir. Montées sur une chaîne en argent massif plaqué or, elles captent la lumière à chaque geste et apportent à votre poignet un peu du calme, de la force et de la rare beauté de la nature.',s_lead:'Forgées dans l’ombre. Faites pour la lumière.',tg1:'Pierres 100 % naturelles',tg2:'Argent massif plaqué or',s_p2:'Rien de bruyant. Tout se remarque.',c1n:'Rubis',c1d:'Du rose au violet profond',c2n:'Émeraude',c2d:'Dégradé de vert intense',c3n:'Saphir bleu',c3d:'Dégradé de bleu nuit profond',c4n:'Saphir jaune',c4d:'Dégradé d’or chaud',m1:'Du rose au violet profond, près du fermoir mousqueton et de la chaîne plaquée or.',m2:'Un dégradé de vert intense, pierre après pierre.',m3:'Un bleu nuit qui s’approfondit, perle après perle.',m4:'Un or chaud, du pâle au profond.',
 g_h:'Regardez de plus près',g_cap:'Touchez une image pour changer de vue. Touchez l’image principale pour zoomer.',
 w_h:'Pourquoi ce bracelet',w1h:'Quatre dégradés naturels',w1p:'Rubis, émeraude, saphir bleu et saphir jaune, chacun nuancé de tons profonds à tons plus clairs.',w2h:'Pierres 100 % naturelles',w2p:'Chaque pierre est une pierre naturelle, facettée pour capter la lumière au gré de vos gestes.',w3h:'Argent massif plaqué or',w3p:'Chaîne en argent massif plaqué or (breloque poinçonnée 925), fermoir mousqueton et chaînette d’extension pour ajuster la longueur.',w4h:'Fait pour être offert',w4p:'Coloré, léger et facile à porter au quotidien : un cadeau qui plaît à bien des styles.',
 l_q:'Élégant sans effort. Coloré sans bruit.',
